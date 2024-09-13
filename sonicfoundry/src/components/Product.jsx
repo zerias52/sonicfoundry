@@ -1,10 +1,15 @@
 import "./Product.css";
+import QuantityPicker from "./QuantityPicker";
+import AddCart from "./AddCart";
 
-function Product() {
+function Product(props) {
   return (
     <div className="product">
-      <h5>Title: Phoenix Rising</h5>
-      <label>Price: $5</label>
+      <img src="/images/missingimage.jpg" alt=""></img>
+      <h5>{props.title}</h5>
+      <label>${props.price}</label>
+      <QuantityPicker></QuantityPicker>
+      <AddCart></AddCart>
     </div>
   );
 }

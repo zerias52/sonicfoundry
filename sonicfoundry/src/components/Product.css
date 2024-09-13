@@ -6,3 +6,7 @@
     display: inline-block;
     margin: 12px;
 }
+
+.product img{
+    width: 100%;
+}
