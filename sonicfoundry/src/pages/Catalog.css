@@ -1,4 +1,7 @@
 .catalog {
     min-height: 600px;
-    background-color: #7D7C7A
+}
+
+.catalog .catBtn button {
+    margin: 10px;
 }

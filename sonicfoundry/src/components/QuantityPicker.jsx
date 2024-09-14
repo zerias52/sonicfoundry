@@ -22,14 +22,14 @@ function QuantityPicker() {
       <button
         disabled={quantity === 1}
         onClick={handleDecrease}
-        className={"btn btn-sm btn-outline-dark"}
+        className={"btn btn-sm btn-outline-primary"}
       >
         -
       </button>
       <span>{quantity}</span>
       <button
         onClick={handleIncrease}
-        className={"btn btn-sm btn-outline-dark"}
+        className={"btn btn-sm btn-outline-primary"}
       >
         +
       </button>

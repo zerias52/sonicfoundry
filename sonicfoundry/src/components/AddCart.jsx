@@ -5,8 +5,10 @@ function AddCart() {
     console.log("Adding to cart");
   }
   return (
-    <div className="AddCart container">
-      <button onClick={add}>Add To Cart</button>
+    <div className="AddCart">
+      <button className={"btn btn-primary btn-sm"} onClick={add}>
+        Add To Cart
+      </button>
     </div>
   );
 }

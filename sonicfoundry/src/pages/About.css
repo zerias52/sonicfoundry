@@ -1,0 +1,14 @@
+.about {
+
+}
+
+.about img{
+    max-width: 80%;
+}
+
+.about p{
+    padding: 10px;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}

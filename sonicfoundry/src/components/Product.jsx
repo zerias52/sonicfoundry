@@ -5,11 +5,13 @@ import AddCart from "./AddCart";
 function Product(props) {
   return (
     <div className="product">
-      <img src="/images/missingimage.jpg" alt=""></img>
-      <h5>{props.title}</h5>
-      <label>${props.price}</label>
-      <QuantityPicker></QuantityPicker>
-      <AddCart></AddCart>
+      <img src={props.data.image} alt=""></img>
+      <h5>{props.data.title}</h5>
+      <label>${props.data.price}</label>
+      <div className="controls">
+        <QuantityPicker></QuantityPicker>
+        <AddCart></AddCart>
+      </div>
     </div>
   );
 }

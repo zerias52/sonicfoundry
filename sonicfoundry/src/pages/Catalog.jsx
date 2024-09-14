@@ -1,15 +1,20 @@
 import "./Catalog.css";
 import Product from "../components/Product";
+import { catalog as products } from "../services/DataService";
+import { categories } from "../services/DataService";
 
 function Catalog() {
   return (
     <div className="catalog">
-      <h1>Welcome to the Sonic Foundry</h1>
-      <Product title={"Bass"} price={"5"}></Product>
-      <Product title={"Drums"} price={"5"}></Product>
-      <Product title={"Guitar"} price={"5"}></Product>
-      <Product title={"Keyboard"} price={"5"}></Product>
-      <Product title={"Drumsticks"} price={"5"}></Product>
+      <h1>Check Out Our Catalog</h1>
+      <div className={"catBtn"}>
+        {categories.map((cat) => (
+          <button className={"btn btn-lg btn-primary"}>{cat}</button>
+        ))}
+      </div>
+      {products.map((prod) => (
+        <Product data={prod}></Product>
+      ))}
     </div>
   );
 }

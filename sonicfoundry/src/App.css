@@ -1,6 +1,13 @@
 .App {
   text-align: center;
-  background-color: #7D7C7A;
+  background-color: #bab8b8;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.app .catalog{
+  flex: 1 0 auto;
 }
 
 .App-logo {

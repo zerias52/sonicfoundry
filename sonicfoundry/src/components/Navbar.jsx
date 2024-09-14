@@ -2,10 +2,10 @@ import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-primary text-light">
+    <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
+        <a className="navbar-brand text-light" href="#">
+          The Sonic Foundry
         </a>
 
         <button
@@ -23,7 +23,11 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a
+                className="nav-link active text-light"
+                aria-current="page"
+                href="#"
+              >
                 Home
               </a>
             </li>
@@ -37,7 +41,7 @@ function Navbar() {
               aria-label="Search"
             />
 
-            <button className="btn btn-outline-dark" type="submit">
+            <button className="btn btn-outline-light" type="submit">
               Search
             </button>
           </form>
