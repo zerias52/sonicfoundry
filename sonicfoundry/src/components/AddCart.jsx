@@ -7,7 +7,7 @@ function AddCart() {
   return (
     <div className="AddCart">
       <button className={"btn btn-primary btn-sm"} onClick={add}>
-        Add To Cart
+        <i className="fa-solid fa-cart-plus"></i>
       </button>
     </div>
   );

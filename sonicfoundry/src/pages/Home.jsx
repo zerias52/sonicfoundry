@@ -1,8 +1,9 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home page">
       <h2>Welcome to the Sonic Foundry</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, nam,
@@ -26,6 +27,10 @@ function Home() {
         iste molestiae neque nesciunt nihil quae rem repudiandae similique ut
         voluptatum? Perspiciatis?
       </p>
+      <Link to="/catalog" className="btn btn-primary btn-lg">
+        <span>Check Out Our Catalog!</span>
+        <i className="fa-solid fa-music"></i>
+      </Link>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { categories } from "../services/DataService";
 
 function Catalog() {
   return (
-    <div className="catalog">
+    <div className="catalog page">
       <h1>Check Out Our Catalog</h1>
       <div className={"catBtn"}>
         {categories.map((cat) => (

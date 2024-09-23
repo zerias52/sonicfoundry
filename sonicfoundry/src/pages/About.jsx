@@ -2,7 +2,7 @@ import "./About.css";
 
 function About() {
   return (
-    <div className="about">
+    <div className="about page">
       <h2>About Us</h2>
       <img src="/images/guitars.webp" alt="" />
       <p>

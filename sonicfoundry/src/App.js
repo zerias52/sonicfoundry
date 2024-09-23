@@ -5,19 +5,32 @@ import Footer from "./components/Footer";
 import Catalog from "./pages/Catalog";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Admin from "./pages/admin";
+import Contact from "./pages/Contact";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar></Navbar>
-      <Home></Home>
-      <Catalog></Catalog>
-      <About></About>
-      <Footer></Footer>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar></Navbar>
+
+        <Routes>
+          <Route path="/" element={<Home></Home>} />
+          <Route path="/catalog" element={<Catalog></Catalog>} />
+          <Route path="/about" element={<About></About>} />
+          <Route path="/admin" element={<Admin></Admin>} />
+          <Route path="/contact" element={<Contact></Contact>} />
+        </Routes>
+
+        <Footer></Footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
