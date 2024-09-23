@@ -14,8 +14,12 @@
     width: 100%;
 }
 
-.controls{
+.product .controls{
     display: flex;
     justify-content: space-around;
     margin: 15px;
+}
+
+.product .total{
+    font-weight: bold;
 }
