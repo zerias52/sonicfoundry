@@ -1,10 +1,17 @@
 import "./Product.css";
 import QuantityPicker from "./QuantityPicker";
-import AddCart from "./AddCart";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import DataContext from "../state/DataContext";
 
 function Product(props) {
+  const addToCart = useContext(DataContext).addProductToCart;
+
   const [quantity, setQuantity] = useState(1);
+
+  function add() {
+    let prod = { ...props.data, quantity: quantity };
+    addToCart(prod);
+  }
 
   function handleQuantity(qty) {
     setQuantity(qty);
@@ -28,7 +35,9 @@ function Product(props) {
       </div>
       <div className="controls">
         <QuantityPicker onChange={handleQuantity}></QuantityPicker>
-        <AddCart></AddCart>
+        <button className={"btn btn-primary btn-sm"} onClick={add}>
+          <i className="fa-solid fa-cart-plus"></i>
+        </button>
       </div>
     </div>
   );

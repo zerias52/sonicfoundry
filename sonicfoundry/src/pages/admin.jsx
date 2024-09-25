@@ -2,6 +2,8 @@ import "./admin.css";
 import { useState } from "react";
 
 function Admin() {
+  const [allCoupons, setAllCoupons] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [product, setProduct] = useState({
     title: "",
     image: "",
@@ -25,6 +27,9 @@ function Admin() {
 
   function saveProduct() {
     console.log(product);
+    const copy = [...allProducts];
+    copy.push(product);
+    setAllProducts(copy);
   }
 
   function handleCoupon(e) {
@@ -38,6 +43,9 @@ function Admin() {
 
   function saveCoupon() {
     console.log(coupon);
+    const copy = [...allCoupons];
+    copy.push(coupon);
+    setAllCoupons(copy);
   }
 
   return (
@@ -104,6 +112,13 @@ function Admin() {
                 Save Product
               </button>
             </div>
+            {allProducts.map((pr) => (
+              <li className={"prod"}>
+                <img src={pr.image} alt="" />
+                <h5>{pr.title}</h5>
+                <label htmlFor="">${pr.price}</label>
+              </li>
+            ))}
           </div>
         </div>
         <div className="form-coupon">
@@ -143,6 +158,11 @@ function Admin() {
                 Save Coupon
               </button>
             </div>
+            {allCoupons.map((cp) => (
+              <li>
+                {cp.code} - {cp.discount}%
+              </li>
+            ))}
           </div>
         </div>
       </div>

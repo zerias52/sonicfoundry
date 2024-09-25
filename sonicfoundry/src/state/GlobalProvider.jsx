@@ -5,7 +5,12 @@ function GlobalProvider(props) {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState({ userID: 123, name: "Zeri" });
 
-  function addProductToCart() {}
+  function addProductToCart(product) {
+    console.log("Global add");
+    let copy = [...cart];
+    copy.push(product);
+    setCart(copy);
+  }
 
   function removeProductFromCart() {}
 
