@@ -159,9 +159,11 @@ function Admin() {
               </button>
             </div>
             {allCoupons.map((cp) => (
-              <li>
-                {cp.code} - {cp.discount}%
-              </li>
+              <div className={"coupon"}>
+                <span>
+                  {cp.code} - {cp.discount}%
+                </span>
+              </div>
             ))}
           </div>
         </div>

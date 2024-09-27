@@ -37,3 +37,8 @@
 .cart .cart-item button {
     width: 50px;
 }
+
+.cart .empty-cart {
+   margin: auto;
+    width: 80%;
+}

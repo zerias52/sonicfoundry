@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <Link className="navbar-brand text-light" to="/">
+        <Link className="navbar-brand text-light logo" to="/">
           The Sonic Foundry
         </Link>
 
@@ -34,6 +34,7 @@ function Navbar() {
                 to="/"
               >
                 Home
+                <i className="icon fa-solid fa-guitar"></i>
               </Link>
             </li>
             <li className="nav-item">
@@ -43,6 +44,7 @@ function Navbar() {
                 to="/catalog"
               >
                 Catalog
+                <i className="icon fa-solid fa-list"></i>
               </Link>
             </li>
             <li className="nav-item">
@@ -52,6 +54,7 @@ function Navbar() {
                 to="/about"
               >
                 About
+                <i className="icon fa-regular fa-address-card"></i>
               </Link>
             </li>
             <li className="nav-item">
@@ -61,6 +64,7 @@ function Navbar() {
                 to="/admin"
               >
                 Admin
+                <i className="icon fa-solid fa-toolbox"></i>
               </Link>
             </li>
             <li className="nav-item">
@@ -70,6 +74,7 @@ function Navbar() {
                 to="/contact"
               >
                 Contact
+                <i className="icon fa-solid fa-message"></i>
               </Link>
             </li>
           </ul>

@@ -4,6 +4,14 @@ import DataContext from "../state/DataContext";
 
 function Cart() {
   const cart = useContext(DataContext).cart;
+  function getCartTotal() {
+    let cartTotal = 0;
+    for (let i = 0; i < cart.length; i++) {
+      const prod = cart[i];
+      cartTotal += prod.quantity * prod.price;
+    }
+    return cartTotal.toFixed(2);
+  }
   return (
     <div className="cart page">
       <h1>Got everything?</h1>
@@ -13,6 +21,12 @@ function Cart() {
       </h5>
       <div className={"parent"}>
         <div className="list">
+          {cart.length === 0 ? (
+            <div className="empty-cart alert alert-primary">
+              <h3>Check out our catalog to add items to your cart!</h3>
+            </div>
+          ) : null}
+
           {cart.map((prod) => (
             <div className={"cart-item"}>
               <img src={prod.image} alt="" />
@@ -27,17 +41,19 @@ function Cart() {
                 {prod.quantity}
               </label>
               <label htmlFor="">
-                <b>Total:</b> ${prod.price * prod.quantity}
+                <b>Total:</b> ${(prod.price * prod.quantity).toFixed(2)}
               </label>
-              <button className={"btn btn-danger "}>X</button>
+              <button className={"btn btn-danger"}>X</button>
             </div>
           ))}
         </div>
-        <div className="side">
-          <h4>Total:</h4>
-          <h3>$1321.00</h3>
-          <button className="btn btn-primary">Proceed to Payment</button>
-        </div>
+        {cart.length > 0 ? (
+          <div className="side">
+            <h4>Total:</h4>
+            <h3>${getCartTotal()}</h3>
+            <button className="btn btn-primary">Proceed to Payment</button>
+          </div>
+        ) : null}
       </div>
     </div>
   );

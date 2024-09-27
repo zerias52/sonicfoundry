@@ -14,7 +14,7 @@ function QuantityPicker(props) {
     if (quantity > 1) {
       let value = quantity - 1;
       setQuantity(value);
-      props.onChange();
+      props.onChange(value);
     }
   }
   return (

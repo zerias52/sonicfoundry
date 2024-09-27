@@ -3,3 +3,13 @@
 /*    color: white;*/
 /*    padding: 12px 0 6px 0;*/
 /*}*/
+
+.navbar .logo{
+    border: solid 2px white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.navbar .icon {
+    margin-left: 3px;
+}

@@ -79,8 +79,8 @@ export const catalog = [
 ];
 
 export const categories = [
-  "instrument",
-  "maintenance",
-  "equipment",
-  "accessory",
+  "Instrument",
+  "Maintenance",
+  "Equipment",
+  "Accessory",
 ];
