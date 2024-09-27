@@ -29,7 +29,6 @@ function Home() {
       </p>
       <Link to="/catalog" className="btn btn-primary btn-lg">
         <span>Check Out Our Catalog!</span>
-        <i className="fa-solid fa-music"></i>
       </Link>
     </div>
   );
