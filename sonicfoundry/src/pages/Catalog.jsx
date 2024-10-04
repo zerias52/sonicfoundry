@@ -1,11 +1,22 @@
 import "./Catalog.css";
 import Product from "../components/Product";
-import { catalog as products } from "../services/DataService";
-import { categories } from "../services/DataService";
-import { useState } from "react";
+import DataService, { categories } from "../services/DataService";
+import { useEffect, useState } from "react";
 
 function Catalog() {
   const [filter, setFilter] = useState("");
+  const [products, setProducts] = useState([]);
+
+  async function loadData() {
+    let data = await DataService.getProducts();
+    setProducts(data);
+  }
+
+  //when page loads
+  useEffect(() => {
+    loadData();
+  }, []);
+
   return (
     <div className="catalog page">
       <h1>Check Out Our Catalog</h1>
